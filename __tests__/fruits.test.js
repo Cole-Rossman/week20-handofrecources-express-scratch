@@ -37,7 +37,7 @@ describe('fruit routes', () => {
       },  
     ]);
   });
-  it.skip('/fruits/:id should return a fruit detail', async () => {
+  it('/fruits/:id should return a fruit detail', async () => {
     const resp = await request(app).get('/fruits/1');
     expect(resp.status).toEqual(200);
     expect(resp.body).toEqual({
@@ -47,8 +47,20 @@ describe('fruit routes', () => {
       benefits: 'Consumption of Mangos can lead to lower blood pressure, a regular pulse and a stable digestive system',
     });
   });
-  
+  it('POST /fruits should create a new fruit', async () => {
+    const resp = await request(app).post('/fruits').send({
+      name: 'Grapes',
+      origin: 'Egypt',
+      benefits: 'They are healthy and tasty.',
+    });
+    expect(resp.status).toEqual(200);
+    expect(resp.body.name).toEqual('Grapes');
+    expect(resp.body.origin).toEqual('Egypt');
+    expect(resp.body.benefits).toEqual('They are healthy and tasty.');
+    expect(resp.body.id).not.toBeUndefined();
+  });
 
+  
   afterAll(() => {
     pool.end();
   });
