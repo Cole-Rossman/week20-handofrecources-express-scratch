@@ -76,7 +76,7 @@ VALUES
     ('Stout', 'Dark Brown', '4%-13% alcohol'),
     ('Lager', 'Gold', '5% alcohol'),
     ('Porter', 'Dark Brown', '5%-13% alcohol'),
-    ('IPA', 'Amber and cloudy', '4.5%-7%');
+    ('IPA', 'Amber and cloudy', '4.5%-7% alcohol');
 
 INSERT INTO cars (
     name,
