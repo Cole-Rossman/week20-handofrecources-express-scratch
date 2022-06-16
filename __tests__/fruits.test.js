@@ -59,6 +59,11 @@ describe('fruit routes', () => {
     expect(resp.body.benefits).toEqual('They are healthy and tasty.');
     expect(resp.body.id).not.toBeUndefined();
   });
+  it('PUT /fruits/:id should update fruit', async () => {
+    const resp = await request(app).put('/fruits/2').send({ name: 'Pear' });
+    expect(resp.status).toEqual(200);
+    expect(resp.body.name).toEqual('Pear');
+  });
 
   
   afterAll(() => {
