@@ -52,7 +52,7 @@ INSERT INTO fruits (
 VALUES
     ('Mango', 'India', 'Consumption of Mangos can lead to lower blood pressure, a regular pulse and a stable digestive system'),
     ('Banana', 'Oceania', 'Consumption of bananas can lead to weight loss, digestive health support, improve blood sugar levels and improve heart health' ),
-    ('Watermelon', 'Northeastern Africa', 'Consumption of watermelon can lead to hydraton, improved heart health, reduced inflamation and reduced oxidative stress'),
+    ('Watermelon', 'Northeastern Africa', 'Consumption of watermelon can lead to hydration, improved heart health, reduced inflammation and reduced oxidative stress'),
     ('Apple', 'Kazakhstan', 'Consumption of apples can lead to a lower risk of chronic conditions, such as, diabetes, heart disease and cancer');
 
 INSERT INTO watches (
