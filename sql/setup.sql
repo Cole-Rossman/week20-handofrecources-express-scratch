@@ -65,7 +65,7 @@ VALUES
     ('Nautilus', 'Patek Philippe', 'Geneva, Switzerland', '$35,000'),
     ('Daytona', 'Rolex', 'Geneva, Switzerland', '$13,150'),
     ('Seamaster', 'Omega', 'La Chaux-de-Fonds, Switzerland', '$6,000'),
-    ('RM 008 Tourbillon', 'Richard Mille', 'Les Breuleux, Switzerland', '$7,206,000');
+    ('RM 008 Tourbillion', 'Richard Mille', 'Les Breuleux, Switzerland', '$7,206,000');
 
 INSERT INTO beers (
     type,
