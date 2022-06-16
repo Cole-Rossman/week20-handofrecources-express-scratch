@@ -64,8 +64,13 @@ describe('fruit routes', () => {
     expect(resp.status).toEqual(200);
     expect(resp.body.name).toEqual('Pear');
   });
+  it('DELETE /fruits/:id should delete a fruit', async () => {
+    const resp = await request(app).delete('/fruits/3');
+    expect(resp.status).toBe(200);
+    const { body } = await request(app).get('/fruits/3');
+    expect(body).toEqual('');
+  });
 
-  
   afterAll(() => {
     pool.end();
   });
