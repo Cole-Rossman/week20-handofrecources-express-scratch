@@ -41,14 +41,15 @@ describe('watch routes', () => {
       },
     ]);
   });
-  it.skip('/fruits/:id should return a fruit detail', async () => {
-    const resp = await request(app).get('/fruits/1');
+  it('/watches/:id should return a watch detail', async () => {
+    const resp = await request(app).get('/watches/1');
     expect(resp.status).toEqual(200);
     expect(resp.body).toEqual({
       id: '1',
-      name: 'Mango',
-      origin: 'India',
-      benefits: 'Consumption of Mangos can lead to lower blood pressure, a regular pulse and a stable digestive system',
+      name: 'Nautilus',
+      manufacturer: 'Patek Philippe',
+      origin: 'Geneva, Switzerland',
+      price: '$35,000',
     });
   });
   it.skip('POST /fruits should create a new fruit', async () => {
