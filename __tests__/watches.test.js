@@ -52,27 +52,29 @@ describe('watch routes', () => {
       price: '$35,000',
     });
   });
-  it.skip('POST /fruits should create a new fruit', async () => {
-    const resp = await request(app).post('/fruits').send({
-      name: 'Grapes',
-      origin: 'Egypt',
-      benefits: 'They are healthy and tasty.',
+  it('POST /watches should create a new watch', async () => {
+    const resp = await request(app).post('/watches').send({
+      name: 'Skydweller',
+      manufacturer: 'Rolex',
+      origin: 'Geneva, Switzerland',
+      price: '$17,000',
     });
     expect(resp.status).toEqual(200);
-    expect(resp.body.name).toEqual('Grapes');
-    expect(resp.body.origin).toEqual('Egypt');
-    expect(resp.body.benefits).toEqual('They are healthy and tasty.');
+    expect(resp.body.name).toEqual('Skydweller');
+    expect(resp.body.manufacturer).toEqual('Rolex');
+    expect(resp.body.origin).toEqual('Geneva, Switzerland');
+    expect(resp.body.price).toEqual('$17,000');
     expect(resp.body.id).not.toBeUndefined();
   });
-  it.skip('PUT /fruits/:id should update fruit', async () => {
-    const resp = await request(app).put('/fruits/2').send({ name: 'Pear' });
+  it('PUT /watches/:id should update watches', async () => {
+    const resp = await request(app).put('/watches/2').send({ name: 'Aquaracer' });
     expect(resp.status).toEqual(200);
-    expect(resp.body.name).toEqual('Pear');
+    expect(resp.body.name).toEqual('Aquaracer');
   });
-  it.skip('DELETE /fruits/:id should delete a fruit', async () => {
-    const resp = await request(app).delete('/fruits/3');
+  it('DELETE /watches/:id should delete a watch', async () => {
+    const resp = await request(app).delete('/watches/2');
     expect(resp.status).toBe(200);
-    const { body } = await request(app).get('/fruits/3');
+    const { body } = await request(app).get('/watches/2');
     expect(body).toEqual('');
   });
 
