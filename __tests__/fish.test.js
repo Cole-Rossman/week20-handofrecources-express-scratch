@@ -64,10 +64,10 @@ describe('fish routes', () => {
     expect(resp.status).toEqual(200);
     expect(resp.body.name).toEqual('Bass');
   });
-  it.skip('DELETE /cars/:id should delete a car', async () => {
-    const resp = await request(app).delete('/cars/4');
+  it('DELETE /fish/:id should delete a fish', async () => {
+    const resp = await request(app).delete('/fish/1');
     expect(resp.status).toBe(200);
-    const { body } = await request(app).get('/cars/4');
+    const { body } = await request(app).get('/fish/1');
     expect(body).toEqual('');
   });
 
