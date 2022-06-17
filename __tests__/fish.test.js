@@ -37,15 +37,14 @@ describe('fish routes', () => {
       },
     ]);
   });
-  it.skip('/cars/:id should return a car detail', async () => {
-    const resp = await request(app).get('/cars/3');
+  it('/fish/:id should return a fish detail', async () => {
+    const resp = await request(app).get('/fish/2');
     expect(resp.status).toEqual(200);
     expect(resp.body).toEqual({
-      id: '3',
-      name: 'Chiron',
-      manufacturer: 'Bugatti',
-      origin: 'Italy',
-      price: '$3,300,000'
+      id: '2',
+      name: 'Rainbow Trout',
+      origin: 'North America',
+      lifespan: '7 years',
     });
   });
   it.skip('POST /cars should create a new car', async () => {
