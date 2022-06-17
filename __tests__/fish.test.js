@@ -47,18 +47,16 @@ describe('fish routes', () => {
       lifespan: '7 years',
     });
   });
-  it.skip('POST /cars should create a new car', async () => {
-    const resp = await request(app).post('/cars').send({
-      name: '4Runner',
-      manufacturer: 'Toyota',
-      origin: 'Japan',
-      price: '$40,000',
+  it('POST /fish should create a new fish', async () => {
+    const resp = await request(app).post('/fish').send({
+      name: 'Gator Gar',
+      origin: 'American South',
+      lifespan: '6-26 years',
     });
     expect(resp.status).toEqual(200);
-    expect(resp.body.name).toEqual('4Runner');
-    expect(resp.body.manufacturer).toEqual('Toyota');
-    expect(resp.body.origin).toEqual('Japan');
-    expect(resp.body.price).toEqual('$40,000');
+    expect(resp.body.name).toEqual('Gator Gar');
+    expect(resp.body.origin).toEqual('American South');
+    expect(resp.body.lifespan).toEqual('6-26 years');
     expect(resp.body.id).not.toBeUndefined();
   });
   it.skip('PUT /cars/:id should update cars', async () => {
