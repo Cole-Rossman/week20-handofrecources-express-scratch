@@ -59,10 +59,10 @@ describe('fish routes', () => {
     expect(resp.body.lifespan).toEqual('6-26 years');
     expect(resp.body.id).not.toBeUndefined();
   });
-  it.skip('PUT /cars/:id should update cars', async () => {
-    const resp = await request(app).put('/cars/1').send({ name: 'Viper' });
+  it('PUT /fish/:id should update fish', async () => {
+    const resp = await request(app).put('/fish/2').send({ name: 'Bass' });
     expect(resp.status).toEqual(200);
-    expect(resp.body.name).toEqual('Viper');
+    expect(resp.body.name).toEqual('Bass');
   });
   it.skip('DELETE /cars/:id should delete a car', async () => {
     const resp = await request(app).delete('/cars/4');
