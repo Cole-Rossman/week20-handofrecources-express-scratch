@@ -71,10 +71,10 @@ describe('cars routes', () => {
     expect(resp.status).toEqual(200);
     expect(resp.body.name).toEqual('Viper');
   });
-  it.skip('DELETE /beers/:id should delete a beer', async () => {
-    const resp = await request(app).delete('/beers/1');
+  it('DELETE /cars/:id should delete a car', async () => {
+    const resp = await request(app).delete('/cars/4');
     expect(resp.status).toBe(200);
-    const { body } = await request(app).get('/beers/1');
+    const { body } = await request(app).get('/cars/4');
     expect(body).toEqual('');
   });
 
