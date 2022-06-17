@@ -100,3 +100,4 @@ VALUES
     ('Rainbow Trout', 'North America', '7 years'),
     ('Sturgeon', 'North America', '100 years'),
     ('Greenland Shark', 'Canadian Arctic', '250-500 years');
+    
