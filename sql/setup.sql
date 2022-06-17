@@ -86,9 +86,9 @@ INSERT INTO cars (
 )
 VALUES
     ('Urus', 'Lamborghini', 'Italy', '$230,000'),
-    ('Phantom', 'Rolls Roycs', 'United Kingdom', '$460,000'),
+    ('Phantom', 'Rolls Royce', 'United Kingdom', '$460,000'),
     ('Chiron', 'Bugatti', 'Italy', '$3,300,000'),
-    ('Toyota', 'Corolla', 'Japan', '$20,000');
+    ('Corolla', 'Toyota', 'Japan', '$20,000');
 
 INSERT INTO fish (
     name,
